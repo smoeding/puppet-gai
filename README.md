@@ -52,3 +52,11 @@ There is also a builtin class to achieve this setup.
 ```puppet
 class { 'gai::preferipv4': }
 ```
+
+## Limitations
+
+This module is only useful on systems using glibc and the `/etc/gai.conf` file. It is therefore probably limited to Linux.
+
+## Development
+
+Feel free to send pull requests for new features. Documentation updates with real world configurations are especially appreciated.
