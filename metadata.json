@@ -1,0 +1,32 @@
+{
+  "name": "stm-gai",
+  "version": "1.0.0",
+  "author": "stm",
+  "summary": "Manage the /etc/gai.conf file on Linux.",
+  "license": "BSD-2-Clause",
+  "source": "git://github.com/smoeding/puppet-gai.git",
+  "project_page": "https://github.com/smoeding/puppet-gai",
+  "issues_url": "https://github.com/smoeding/puppet-gai/issues",
+  "tags": [ "dns", "IPv4", "IPv6" ],
+  "operatingsystem_support": [
+    { "operatingsystem": "Debian" },
+    { "operatingsystem": "Ubuntu" },
+    { "operatingsystem": "RedHat" },
+    { "operatingsystem": "CentOS" },
+    { "operatingsystem": "Fedora" },
+    { "operatingsystem": "OracleLinux" },
+    { "operatingsystem": "SLES" },
+    { "operatingsystem": "Scientific" }
+  ],
+  "dependencies": [ ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.2.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ]
+}
