@@ -6,16 +6,16 @@
 #    Add another rule to the RFC 3484 label table.
 #    See section 2.1 in RFC 3484.
 #
-<% @label.each do |key, value| -%>
-label <%= '%-24s' % key -%> <%= value %>
+<% @label.sort_by{|_key, value| value.to_i}.each do |x| -%>
+label <%= '%-24s' % x[0] -%> <%= x[1] %>
 <% end -%>
 #
 # precedence  <mask>   <value>
 #    Add another rule to the RFC 3484 precedence table.
 #    See section 2.1 and 10.3 in RFC 3484.
 #
-<% @precedence.each do |key, value| -%>
-precedence <%= '%-24s' % key -%> <%= value %>
+<% @precedence.sort_by{|_key, value| value.to_i}.each do |x| -%>
+precedence <%= '%-24s' % x[0] -%> <%= x[1] %>
 <% end -%>
 #
 # scopev4  <mask>  <value>
