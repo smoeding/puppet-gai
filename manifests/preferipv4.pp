@@ -1,23 +1,25 @@
-# preferipv4.pp --- Setup /etc/gai.conf for a host prefering IPv4
+# = Class: gai::preferipv4
 #
-# Copyright (c) 2013 Stefan Moeding
-# All rights reserved.
+# Define precedence table in /etc/gai.conf to prefer IPv4
 #
-# Author:     Stefan Moeding <stm@kill-9.net>
-# Time-stamp: <2013-11-24 19:31:15 stm>
+# == Parameters:
 #
-# Parameters:
+# None.
 #
-# Requires:
+# == Requires:
 #
-# Usage:
+# Nothing.
+#
+# == Sample Usage:
 #
 #   class { 'gai::preferipv4': }
 #
 #
 class gai::preferipv4 {
-  class { 'gai':
-    # Redefine precedence table to prefer IPv4 addresses
+
+  # Redefine precedence table to prefer IPv4 addresses
+
+  class { '::gai':
     precedence => {
       '::/96'         => '20',
       '2002::/16'     => '30',
