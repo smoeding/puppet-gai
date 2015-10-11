@@ -1,12 +1,13 @@
+# This file is managed by Puppet.
+#
 # Configuration for getaddrinfo(3).
-# Managed by Puppet!
 #
 # label   <mask>   <value>
 #    Add another rule to the RFC 3484 label table.
 #    See section 2.1 in RFC 3484.
 #
 <% @label.each do |key, value| -%>
-<%= sprintf("label %-24s %s", key, value) %>
+label <%= '%-24s' % key -%> <%= value %>
 <% end -%>
 #
 # precedence  <mask>   <value>
@@ -14,7 +15,7 @@
 #    See section 2.1 and 10.3 in RFC 3484.
 #
 <% @precedence.each do |key, value| -%>
-<%= sprintf("precedence %-24s %s", key, value) %>
+precedence <%= '%-24s' % key -%> <%= value %>
 <% end -%>
 #
 # scopev4  <mask>  <value>
@@ -22,7 +23,7 @@
 #    See section 3.2 in RFC 3484.
 #
 <% @scopev4.each do |key, value| -%>
-<%= sprintf("scopev4 %-24s %s", key, value) %>
+scopev4 <%= '%-24s' % key -%> <%= value %>
 <% end -%>
 #
 # reload  <yes|no>
