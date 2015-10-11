@@ -42,6 +42,6 @@ class gai (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('gai/gaiconf.erb'),
+    content => template('gai/gai.conf.erb'),
   }
 }
