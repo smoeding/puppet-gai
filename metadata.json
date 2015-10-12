@@ -1,6 +1,6 @@
 {
   "name": "stm-gai",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "stm",
   "summary": "Manage the /etc/gai.conf file on Linux.",
   "license": "BSD-2-Clause",
@@ -18,7 +18,12 @@
     { "operatingsystem": "SLES" },
     { "operatingsystem": "Scientific" }
   ],
-  "dependencies": [ ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": "4.x"
+    }
+  ],
   "requirements": [
     {
       "name": "pe",

@@ -15,7 +15,7 @@
 #
 # [*reload*]
 #   Indicate if the config should be reloaded for every loopkup.
-#   Valid options: 'yes', 'no' od undefined. Default: undef
+#   Valid options: 'yes', 'no' or undefined. Default: undef
 #
 # == Requires:
 #
@@ -32,6 +32,19 @@ class gai (
   $scopev4    = {},
   $reload     = undef,
 ) {
+
+  if !empty($label) {
+    validate_hash($label)
+  }
+  if !empty($precedence) {
+    validate_hash($precedence)
+  }
+  if !empty($scopev4) {
+    validate_hash($scopev4)
+  }
+  if $reload {
+    validate_re($reload, [ 'yes', 'no' ])
+  }
 
   # Declaring the class without any parameters will create the file
   # /etc/gai.conf containing comments only. In this case the operating
