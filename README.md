@@ -25,7 +25,17 @@ RFC 3484 provides an algorithm to sort the result of a call to `getaddrinfo(3)` 
 
 ## Setup
 
-Declare the gai class to install an empty configuration enforcing the default rules.
+### What gai affects
+
+The module creates and modifies the `/etc/gai.conf` file. The settings in this file can affect the order in which network addresses are used when connecting to a remote host. See RFC 3484 for details.
+
+### Setup requirements
+
+The gai module requires the Puppetlabs modules `stdlib`.
+
+### Beginning with gai
+
+Declare the gai class to install an configuration file containing comments only. In this case the operating system enforces the default rules. RFC 3484 has the details.
 
 ```puppet
 class { 'gai': }
@@ -47,15 +57,43 @@ class { 'gai':
 }
 ```
 
-There is also a builtin class to achieve this setup.
+There is also a builtin class that can be used as a shortcut for this configuration.
 
 ```puppet
 class { 'gai::preferipv4': }
 ```
 
+## Reference
+
+### Classes
+
+#### Public Classes
+
+* `gai`: The main class which installs the `/etc/gai.conf` file.
+
+* `gai::preferipv4`: Installs a predefined set of preference rules that cause the system to prefer IPv4 addresses.
+
+#### Class: `gai`
+
+The main class to manage the `/etc/gai.conf` file.
+
+##### Parameters (all optional)
+
+* `label`: A hash with netmask/precedence pairs for the label table. The precedence value should be an integer. It is used to define the order of evaluation.
+
+* `precedence`: A hash with netmask/precedence pairs for the precedence table. Again the precedence value should be an integer defining the order of evaluation.
+
+* `scopev4`: A hash with mask/value pairs for the scope table. Entries are added to the RFC 3484 scope table.
+
+* `reload`: Indicate if the config should be reloaded for every loopkup. Valid options: 'yes', 'no' or undefined (which doesn't set any value in the file). Default: undef
+
+#### Class: `gai::preferipv4`
+
+The class can be used as a shortcut to install a configuration where IPv4 addresses are prefered over IPv6 addresses.
+
 ## Limitations
 
-This module is only useful on systems using glibc and the `/etc/gai.conf` file. It is therefore probably limited to Linux.
+This module is only useful on systems using glibc and the `/etc/gai.conf` file. It is therefore probably limited to Linux only.
 
 ## Development
 
