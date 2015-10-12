@@ -2,7 +2,7 @@
   "name": "stm-gai",
   "version": "0.1.0",
   "author": "stm",
-  "summary": "Manage the /etc/gai.conf file on Linux.",
+  "summary": "Manage the configuration of the default address selection for IPv6.",
   "license": "BSD-2-Clause",
   "source": "git://github.com/smoeding/puppet-gai.git",
   "project_page": "https://github.com/smoeding/puppet-gai",

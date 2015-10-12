@@ -17,7 +17,7 @@
 
 ## Overview
 
-Manage `/etc/gai.conf` with Puppet.
+Manage the configuration of the default address selection for IPv6 in `/etc/gai.conf`.
 
 ## Module description
 
