@@ -1,6 +1,7 @@
 # gai
 
 [![Build Status](https://travis-ci.org/smoeding/puppet-gai.svg?branch=master)](https://travis-ci.org/smoeding/puppet-gai)
+[![Puppet Forge](http://img.shields.io/puppetforge/v/stm/gai.svg)](https://forge.puppetlabs.com/stm/gai)
 
 #### Table of Contents
 
