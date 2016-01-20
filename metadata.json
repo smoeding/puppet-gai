@@ -4,7 +4,7 @@
   "author": "stm",
   "summary": "Manage the configuration of the default address selection for IPv6.",
   "license": "BSD-2-Clause",
-  "source": "git://github.com/smoeding/puppet-gai.git",
+  "source": "https://github.com/smoeding/puppet-gai",
   "project_page": "https://github.com/smoeding/puppet-gai",
   "issues_url": "https://github.com/smoeding/puppet-gai/issues",
   "tags": [ "dns", "IPv4", "IPv6" ],
