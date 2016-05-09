@@ -42,7 +42,8 @@ class gai (
   if !empty($scopev4) {
     validate_hash($scopev4)
   }
-  if $reload {
+  if ($reload != undef) {
+    validate_string($reload)
     validate_re($reload, [ 'yes', 'no' ])
   }
 
