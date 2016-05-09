@@ -1,12 +1,13 @@
 {
   "name": "stm-gai",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "stm",
   "summary": "Manage the configuration of the default address selection for IPv6.",
   "license": "BSD-2-Clause",
   "source": "https://github.com/smoeding/puppet-gai",
   "project_page": "https://github.com/smoeding/puppet-gai",
   "issues_url": "https://github.com/smoeding/puppet-gai/issues",
+  "data_provider": null,
   "tags": [ "dns", "IPv4", "IPv6" ],
   "operatingsystem_support": [
     { "operatingsystem": "Debian" },
@@ -19,19 +20,10 @@
     { "operatingsystem": "Scientific" }
   ],
   "dependencies": [
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": "4.x"
-    }
+    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.2.0 < 5.0.0" }
   ],
   "requirements": [
-    {
-      "name": "pe",
-      "version_requirement": "3.2.x"
-    },
-    {
-      "name": "puppet",
-      "version_requirement": "3.x"
-    }
+    { "name": "pe", "version_requirement": ">= 3.0.0 < 2015.4.0" },
+    { "name": "puppet", "version_requirement": ">= 3.0.0 < 5.0.0" }
   ]
 }
