@@ -3,22 +3,22 @@ require 'spec_helper'
 describe 'gai' do
   context 'with default parameters' do
     it {
-      is_expected.to contain_class('gai').with(
-                       'label'      => {},
-                       'precedence' => {},
-                       'scopev4'    => {},
-                       'reload'     => nil
-                     )
+      is_expected.to contain_class('gai')
+                       .with('label'      => {},
+                             'precedence' => {},
+                             'scopev4'    => {},
+                             'reload'     => nil
+                            )
 
-      is_expected.to contain_file('/etc/gai.conf') \
+      is_expected.to contain_file('/etc/gai.conf')
                        .with_ensure('file') \
                        .with_owner('root') \
                        .with_group('root') \
                        .with_mode('0644') \
-                       .without_content(/^label /) \
-                       .without_content(/^precedence /) \
-                       .without_content(/^scopev4 /) \
-                       .without_content(/^reload /)
+                       .without_content(%r{^label }) \
+                       .without_content(%r{^precedence }) \
+                       .without_content(%r{^scopev4 }) \
+                       .without_content(%r{^reload })
     }
   end
 
@@ -28,8 +28,8 @@ describe 'gai' do
     end
 
     it {
-      is_expected.to contain_file('/etc/gai.conf') \
-                       .with_content(/^label\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf')
+                       .with_content(%r{^label\s+::ffff:127.0.0.0.0\s+10$})
     }
   end
 
@@ -38,7 +38,9 @@ describe 'gai' do
       { :label => 'foo' }
     end
 
-    it { is_expected.to raise_error Puppet::Error, /is not a Hash/ }
+    it {
+      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
+    }
   end
 
   context 'with valid parameter precedence' do
@@ -47,8 +49,8 @@ describe 'gai' do
     end
 
     it {
-      is_expected.to contain_file('/etc/gai.conf') \
-                       .with_content(/^precedence\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf')
+                       .with_content(%r{^precedence\s+::ffff:127.0.0.0.0\s+10$})
     }
   end
 
@@ -57,7 +59,9 @@ describe 'gai' do
       { :precedence => 'foo' }
     end
 
-    it { is_expected.to raise_error Puppet::Error, /is not a Hash/ }
+    it {
+      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
+    }
   end
 
   context 'with valid parameter scopev4' do
@@ -66,8 +70,8 @@ describe 'gai' do
     end
 
     it {
-      is_expected.to contain_file('/etc/gai.conf') \
-                       .with_content(/^scopev4\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf')
+                       .with_content(%r{^scopev4\s+::ffff:127.0.0.0.0\s+10$})
     }
   end
 
@@ -76,7 +80,9 @@ describe 'gai' do
       { :scopev4 => 'foo' }
     end
 
-    it { is_expected.to raise_error Puppet::Error, /is not a Hash/ }
+    it {
+      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
+    }
   end
 
   context 'with parameter reload => yes' do
@@ -85,7 +91,8 @@ describe 'gai' do
     end
 
     it {
-      is_expected.to contain_file('/etc/gai.conf').with_content(/^reload\s+yes$/)
+      is_expected.to contain_file('/etc/gai.conf')
+                       .with_content(%r{^reload\s+yes$})
     }
   end
 
@@ -95,7 +102,8 @@ describe 'gai' do
     end
 
     it {
-      is_expected.to contain_file('/etc/gai.conf').with_content(/^reload\s+no$/)
+      is_expected.to contain_file('/etc/gai.conf')
+                       .with_content(%r{^reload\s+no$})
     }
   end
 
@@ -104,7 +112,9 @@ describe 'gai' do
       { :reload => 'foo' }
     end
 
-    it { is_expected.to raise_error Puppet::Error, /does not match/ }
+    it {
+      is_expected.to raise_error Puppet::Error, %r{does not match}
+    }
   end
 
   context 'with parameter reload => []' do
@@ -112,6 +122,8 @@ describe 'gai' do
       { :reload => [] }
     end
 
-    it { is_expected.to raise_error Puppet::Error, /is not a string/ }
+    it {
+      is_expected.to raise_error Puppet::Error, %r{is not a string}
+    }
   end
 end
