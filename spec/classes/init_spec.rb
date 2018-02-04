@@ -3,22 +3,22 @@ require 'spec_helper'
 describe 'gai' do
   context 'with default parameters' do
     it {
-      should contain_class('gai').with(
-               'label'      => {},
-               'precedence' => {},
-               'scopev4'    => {},
-               'reload'     => nil,
-             )
+      is_expected.to contain_class('gai').with(
+                       'label'      => {},
+                       'precedence' => {},
+                       'scopev4'    => {},
+                       'reload'     => nil
+                     )
 
-      should contain_file('/etc/gai.conf') \
-              .with_ensure('file') \
-              .with_owner('root') \
-              .with_group('root') \
-              .with_mode('0644') \
-              .without_content(/^label /) \
-              .without_content(/^precedence /) \
-              .without_content(/^scopev4 /) \
-              .without_content(/^reload /)
+      is_expected.to contain_file('/etc/gai.conf') \
+                       .with_ensure('file') \
+                       .with_owner('root') \
+                       .with_group('root') \
+                       .with_mode('0644') \
+                       .without_content(/^label /) \
+                       .without_content(/^precedence /) \
+                       .without_content(/^scopev4 /) \
+                       .without_content(/^reload /)
     }
   end
 
@@ -28,8 +28,8 @@ describe 'gai' do
     end
 
     it {
-      should contain_file('/etc/gai.conf') \
-              .with_content(/^label\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf') \
+                       .with_content(/^label\s+::ffff:127.0.0.0.0\s+10$/)
     }
   end
 
@@ -47,8 +47,8 @@ describe 'gai' do
     end
 
     it {
-      should contain_file('/etc/gai.conf') \
-              .with_content(/^precedence\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf') \
+                       .with_content(/^precedence\s+::ffff:127.0.0.0.0\s+10$/)
     }
   end
 
@@ -66,8 +66,8 @@ describe 'gai' do
     end
 
     it {
-      should contain_file('/etc/gai.conf') \
-              .with_content(/^scopev4\s+::ffff:127.0.0.0.0\s+10$/)
+      is_expected.to contain_file('/etc/gai.conf') \
+                       .with_content(/^scopev4\s+::ffff:127.0.0.0.0\s+10$/)
     }
   end
 
@@ -85,7 +85,7 @@ describe 'gai' do
     end
 
     it {
-      should contain_file('/etc/gai.conf').with_content(/^reload\s+yes$/)
+      is_expected.to contain_file('/etc/gai.conf').with_content(/^reload\s+yes$/)
     }
   end
 
@@ -95,7 +95,7 @@ describe 'gai' do
     end
 
     it {
-      should contain_file('/etc/gai.conf').with_content(/^reload\s+no$/)
+      is_expected.to contain_file('/etc/gai.conf').with_content(/^reload\s+no$/)
     }
   end
 
