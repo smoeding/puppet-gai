@@ -20,10 +20,15 @@
     { "operatingsystem": "Scientific" }
   ],
   "dependencies": [
-    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.2.0 < 5.0.0" }
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.2.0 < 5.0.0"
+    }
   ],
   "requirements": [
-    { "name": "pe", "version_requirement": ">= 3.0.0 < 2015.4.0" },
-    { "name": "puppet", "version_requirement": ">= 3.0.0 < 5.0.0" }
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0 < 6.0.0"
+    }
   ]
 }
