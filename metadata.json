@@ -7,22 +7,36 @@
   "source": "https://github.com/smoeding/puppet-gai",
   "project_page": "https://github.com/smoeding/puppet-gai",
   "issues_url": "https://github.com/smoeding/puppet-gai/issues",
-  "data_provider": null,
-  "tags": [ "dns", "IPv4", "IPv6" ],
-  "operatingsystem_support": [
-    { "operatingsystem": "Debian" },
-    { "operatingsystem": "Ubuntu" },
-    { "operatingsystem": "RedHat" },
-    { "operatingsystem": "CentOS" },
-    { "operatingsystem": "Fedora" },
-    { "operatingsystem": "OracleLinux" },
-    { "operatingsystem": "SLES" },
-    { "operatingsystem": "Scientific" }
-  ],
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.2.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian"
+    },
+    {
+      "operatingsystem": "Ubuntu"
+    },
+    {
+      "operatingsystem": "RedHat"
+    },
+    {
+      "operatingsystem": "CentOS"
+    },
+    {
+      "operatingsystem": "Fedora"
+    },
+    {
+      "operatingsystem": "OracleLinux"
+    },
+    {
+      "operatingsystem": "SLES"
+    },
+    {
+      "operatingsystem": "Scientific"
     }
   ],
   "requirements": [
@@ -30,5 +44,13 @@
       "name": "puppet",
       "version_requirement": ">= 3.0.0 < 6.0.0"
     }
-  ]
+  ],
+  "tags": [
+    "dns",
+    "IPv4",
+    "IPv6"
+  ],
+  "pdk-version": "1.6.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates",
+  "template-ref": "heads/master-0-g6b0d497"
 }
