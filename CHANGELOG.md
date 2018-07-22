@@ -1,3 +1,13 @@
+## 2018-07-22 - Release 1.0.0
+
+### Summary
+
+This release is a complete rewrite of the module.
+
+#### Breaking changes
+
+- The module now uses data types to validate input parameters and therefore no longer works with Puppet 3.
+
 ## 2018-02-04 - Release 0.2.1
 
 ### Summary
