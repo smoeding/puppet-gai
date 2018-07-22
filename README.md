@@ -29,7 +29,7 @@ RFC 3484 provides an algorithm to sort the result of a call to `getaddrinfo(3)` 
 
 ### What gai affects
 
-The module creates and modifies the `/etc/gai.conf` file. The settings in this file can affect the order in which network addresses are used when connecting to a remote host. See RFC 3484 for details.
+The module creates and modifies the `/etc/gai.conf` file. The settings in this file can affect the order in which network addresses are used when connecting to a remote host. See [RFC 3484](https://www.ietf.org/rfc/rfc3484.txt) for details.
 
 ### Setup requirements
 
@@ -37,7 +37,7 @@ The gai module requires the Puppetlabs modules `stdlib`.
 
 ### Beginning with gai
 
-Declare the gai class to install an configuration file containing comments only. In this case the operating system enforces the default rules. RFC 3484 has the details.
+Declare the gai class to install an configuration file containing comments only. In this case the operating system enforces the default rules. [RFC 3484](https://www.ietf.org/rfc/rfc3484.txt) has the details.
 
 ```puppet
 class { 'gai': }
