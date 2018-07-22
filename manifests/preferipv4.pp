@@ -1,18 +1,10 @@
-# = Class: gai::preferipv4
+# preferipv4.pp --- Class gai::preferipv4
 #
-# Define precedence table in /etc/gai.conf to prefer IPv4
+# @summary Define precedence table in /etc/gai.conf to prefer IPv4
 #
-# == Parameters:
+# @example Declaring the class
 #
-# None.
-#
-# == Requires:
-#
-# Nothing.
-#
-# == Sample Usage:
-#
-#   class { 'gai::preferipv4': }
+#   include puppet-gai::preferipv4
 #
 #
 class gai::preferipv4 {

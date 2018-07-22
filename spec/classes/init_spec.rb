@@ -32,16 +32,6 @@ describe 'gai' do
     }
   end
 
-  context 'with invalid parameter label' do
-    let :params do
-      { label: 'foo' }
-    end
-
-    it {
-      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
-    }
-  end
-
   context 'with valid parameter precedence' do
     let :params do
       { precedence: { '::ffff:127.0.0.0.0' => '10' } }
@@ -53,16 +43,6 @@ describe 'gai' do
     }
   end
 
-  context 'with invalid parameter precedence' do
-    let :params do
-      { precedence: 'foo' }
-    end
-
-    it {
-      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
-    }
-  end
-
   context 'with valid parameter scopev4' do
     let :params do
       { scopev4: { '::ffff:127.0.0.0.0' => '10' } }
@@ -71,16 +51,6 @@ describe 'gai' do
     it {
       is_expected.to contain_file('/etc/gai.conf')
         .with_content(%r{^scopev4\s+::ffff:127.0.0.0.0\s+10$})
-    }
-  end
-
-  context 'with invalid parameter scopev4' do
-    let :params do
-      { scopev4: 'foo' }
-    end
-
-    it {
-      is_expected.to raise_error Puppet::Error, %r{is not a Hash}
     }
   end
 
@@ -103,26 +73,6 @@ describe 'gai' do
     it {
       is_expected.to contain_file('/etc/gai.conf')
         .with_content(%r{^reload\s+no$})
-    }
-  end
-
-  context 'with parameter reload => foo' do
-    let :params do
-      { reload: 'foo' }
-    end
-
-    it {
-      is_expected.to raise_error Puppet::Error, %r{does not match}
-    }
-  end
-
-  context 'with parameter reload => []' do
-    let :params do
-      { reload: [] }
-    end
-
-    it {
-      is_expected.to raise_error Puppet::Error, %r{is not a string}
     }
   end
 end
