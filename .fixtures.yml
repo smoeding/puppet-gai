@@ -2,6 +2,6 @@ fixtures:
   repositories:
     'stdlib':
       repo: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
-      ref: '4.2.0'
+      ref: '5.0.0'
   symlinks:
     'gai': "#{source_dir}"
