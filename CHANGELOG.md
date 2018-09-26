@@ -1,3 +1,9 @@
+## 2018-09-26 - Release 1.1.0
+
+### Summary
+
+This minor release has been updated to PDK 1.7.0 and increases the maximum compatible version of stdlib from `5.0.0` to `6.0.0`. No functional changes have been made.
+
 ## 2018-07-22 - Release 1.0.0
 
 ### Summary
