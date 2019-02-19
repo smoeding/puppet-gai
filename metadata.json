@@ -1,6 +1,6 @@
 {
   "name": "stm-gai",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "stm",
   "summary": "Manage the configuration of the default address selection for IPv6.",
   "license": "BSD-2-Clause",
@@ -42,7 +42,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.0.0 < 6.0.0"
+      "version_requirement": ">= 4.0.0 < 7.0.0"
     }
   ],
   "tags": [

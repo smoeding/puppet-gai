@@ -1,3 +1,9 @@
+## 2019-02-19 - Release 1.2.0
+
+### Summary
+
+Updated to PDK 1.9.0 and added support for Puppet Release 6. No functional changes have been made.
+
 ## 2018-09-26 - Release 1.1.0
 
 ### Summary
