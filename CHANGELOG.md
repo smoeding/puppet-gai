@@ -1,3 +1,14 @@
+## 2019-09-27 - Release 2.0.0
+
+### Breaking changes
+
+- Remove support for Puppet 4.
+
+### Enhancements
+
+- Add support for Puppet 6.
+- Add support for Stdlib 6.x.
+
 ## 2019-02-19 - Release 1.2.0
 
 ### Summary
