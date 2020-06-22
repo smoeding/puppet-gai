@@ -1,4 +1,4 @@
-## 2019-09-27 - Release 2.0.0
+## 2020-06-22 - Release 2.0.0
 
 ### Breaking changes
 
