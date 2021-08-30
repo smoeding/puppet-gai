@@ -47,7 +47,7 @@ class { 'gai': }
 
 ### Modify the precedence rules to prefer IPv4 addresses
 
-The class parameter `precedence` takes a hash where the keys are netmasks and the associated values define the order in which these netmasks are checked. The following example shows a setup where IPv4 addresses are prefered when the destination host also has an IPv6 address.
+The class parameter `precedence` takes a hash where the keys are netmasks and the associated values define the order in which these netmasks are checked. The following example shows a setup where IPv4 addresses are preferred when the destination host also has an IPv6 address.
 
 ```puppet
 class { 'gai':

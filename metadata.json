@@ -1,6 +1,6 @@
 {
   "name": "stm-gai",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "stm",
   "summary": "Manage the configuration of the default address selection for IPv6.",
   "license": "BSD-2-Clause",
@@ -10,7 +10,7 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 5.1.0 < 8.0.0"
+      "version_requirement": ">= 5.1.0 < 9.0.0"
     }
   ],
   "operatingsystem_support": [
