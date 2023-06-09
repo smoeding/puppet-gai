@@ -1,3 +1,9 @@
+## 2023-06-09 - Release 2.3.0
+
+### Enhancements
+
+- Drop dependency on Stdlib module
+
 ## 2021-08-30 - Release 2.2.0
 
 ### Enhancements
