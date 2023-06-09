@@ -89,7 +89,7 @@ The main class to manage the `/etc/gai.conf` file.
 
 * `scopev4`: A hash with mask/value pairs for the scope table. Entries are added to the RFC 3484 scope table.
 
-* `reload`: Indicate if the config should be reloaded for every loopkup. Valid options: 'yes', 'no' or undefined (which doesn't set any value in the file). Default: undef
+* `reload`: Indicate if the config should be reloaded for every lookup. Valid options: 'yes', 'no' or undefined (which doesn't set any value in the file). Default: undef
 
 #### Class: `gai::preferipv4`
 
