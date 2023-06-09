@@ -26,7 +26,6 @@ class gai (
   Hash[String,String]        $scopev4    = {},
   Optional[Enum['yes','no']] $reload     = undef,
 ) {
-
   # Declaring the class without any parameters will create the file
   # /etc/gai.conf containing comments only. In this case the operating
   # system specific default rules apply. See RFC 3484 for details.
