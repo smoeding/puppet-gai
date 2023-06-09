@@ -1,6 +1,6 @@
 # gai
 
-[![Build Status](https://travis-ci.com/smoeding/puppet-gai.svg?branch=master)](https://travis-ci.com/smoeding/puppet-gai)
+[![Build Status](https://github.com/smoeding/puppet-gai/actions/workflows/CI.yaml/badge.svg)](https://github.com/smoeding/puppet-gai/actions/workflows/CI.yaml)
 [![Puppet Forge](http://img.shields.io/puppetforge/v/stm/gai.svg)](https://forge.puppetlabs.com/stm/gai)
 [![License](https://img.shields.io/github/license/smoeding/puppet-gai.svg)](https://raw.githubusercontent.com/smoeding/puppet-gai/master/LICENSE)
 
