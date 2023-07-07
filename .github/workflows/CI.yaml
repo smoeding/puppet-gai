@@ -12,13 +12,13 @@ on:
 
 jobs:
   check:
+    name: Puppet ${{ matrix.puppet_version }}
+    runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        puppet_version: [6, 7]
-
-    name: Puppet ${{ matrix.puppet_version }}
-    runs-on: ubuntu-latest
+        puppet_version: [7, 8]
 
     steps:
       - name: Clone repository
