@@ -7,7 +7,7 @@ describe 'gai' do
         .with_label({})
         .with_precedence({})
         .with_scopev4({})
-        .with_reload(nil)
+        .without_reload
 
       is_expected.to contain_file('/etc/gai.conf')
         .with_ensure('file')
