@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe 'gai' do
   on_supported_os.each do |os, facts|
-    context 'with default parameters' do
+    context "on #{os} with default values for all parameters" do
       let(:facts) { facts }
 
       it {
